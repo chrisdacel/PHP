@@ -10,11 +10,11 @@
         <h1> Iniciar Sesion </h1>
         <form action="#" method="post">
             <label> Nombre </label>
-            <input type="text" name="name">
+            <input type="text" name="name" id='name'>
             <br>
             <label> Contraseña </label>
-            <input type="password" name="password">
-            <input type="submit" value="enviar">
+            <input type="password" name="password" id='password'>
+            <input type="submit" value="Enviar" class ='btn'>
         </form>
     </body>
 </html>
