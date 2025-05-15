@@ -14,6 +14,19 @@ body {
   color: #333;
 }
 
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #000000;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 3em;
+}
+
 /* Estilo del contenedor del formulario */
 form {
     background-color: #ffffff8b;
@@ -75,3 +88,5 @@ input[type="password"]:focus {
 .btn:hover {
   background-color: #5a67d8;
 }
+
+
