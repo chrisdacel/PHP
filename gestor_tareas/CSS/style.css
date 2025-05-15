@@ -35,6 +35,7 @@ form {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  position: relative;
 
 }
 
@@ -70,10 +71,14 @@ input[type="password"]:focus {
   border-color: #667eea;
   outline: none;
 }
-.registro {
+.registro  {
   color: #333;
-  text-decoration: none;
-  margin-bottom: 300px;
+  position: absolute;
+  font-size: medium;
+
+}
+.registro a::visited{
+  color:#333;
 }
 /* Botón */
 .btn {
@@ -85,6 +90,7 @@ input[type="password"]:focus {
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
+  margin-top: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

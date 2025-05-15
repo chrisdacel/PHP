@@ -2,42 +2,44 @@
 include_once"includes/header.php";
 ?>
 <?php
-if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-$user_name=$_POST["user_name"];
-$archivo="usuarios/". $user_name.".json";
+    if (!file_exists('usuarios')) {
+        mkdir('usuarios', 0777, true);
+    }
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-if(file_exists($archivo)){
-echo("Nombre Invalido, Usa otro nombre por favor!");
-}
-else{
+        $user_name=$_POST["user_name"];
+        $archivo="usuarios/". $user_name.".json";
 
-$tareas=array("tareas"=>array());
-// se genera esta estructura
-/*[
-    tareas=[];
-    ]*/
+    if(file_exists($archivo)){
+        echo("Nombre Invalido, Usa otro nombre por favor!");
 
-// ESTRUCTURA TEMPORAL(Internet)
-// conversion a cadena de json
-$json=json_encode($tareas,JSON_PRETTY_PRINT);
-// creacion de archivo y envio de informacion
-file_put_contents($archivo,$json);
-}
+    } else {
 
-echo("se ha registrado correctamente");
+        $tareas=array("tareas"=>array());
+        // se genera esta estructura
+        /*[
+            tareas=[];
+            ]*/
 
+        // ESTRUCTURA TEMPORAL(Internet)
+        // conversion a cadena de json
+        $json=json_encode($tareas,JSON_PRETTY_PRINT);
+        // creacion de archivo y envio de informacion
+        file_put_contents($archivo,$json);
+        echo("se ha registrado correctamente");
+    }
 }
 
 ?>
     <h1>Registrate</h1>
-    <form action="index.php" method="post">
+    <form method="POST">
         <label>Nombre:</label>
         <input type="text" placeholder="Nombre" required name="user_name">
         <label>Contraseña:</label>
         <input type="password" placeholder="Contraseña" required>
-        <input type="submit" value="enviar">
-
+        <input type="submit" value="Enviar" class ='btn'>
+        
 <?php
     include_once"includes/footer.php";
 ?>
