@@ -8,7 +8,10 @@
             <br>
             <label> Contraseña </label>
             <input type="password" name="password" id='password'>
+            <a href="registro.php" class= 'registro' > <p> Registrarse </p> </a>
             <input type="submit" value="Enviar" class ='btn'>
+
+
         </form>
 <?php
     include_once"includes/footer.php";
