@@ -31,6 +31,8 @@ echo("se ha registrado correctamente");
 
 ?>
     <h1>Registrate</h1>
+
+    
     <form action="index.php" method="post">
         <label>Nombre:</label>
         <input type="text" placeholder="Nombre" required name="user_name">
