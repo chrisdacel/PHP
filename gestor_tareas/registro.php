@@ -33,7 +33,7 @@ include_once"includes/header.php";
 
 ?>
     <h1>Registrate</h1>
-    <form method="POST">
+    <form action="index.php" method="post">
         <label>Nombre:</label>
         <input type="text" placeholder="Nombre" required name="user_name">
         <label>Contraseña:</label>
