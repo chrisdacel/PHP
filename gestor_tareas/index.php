@@ -17,14 +17,14 @@
     }
 ?>
         <h1> Iniciar Sesion </h1>
-        <form action="tareas.php" method="POST">
+        <form method="POST">
             <label> Nombre </label>
             <input type="text" name="name" id='name'>
             <br>
             <label> Contraseña </label>
             <input type="password" name="password" id='password' required>
             <a href="registro.php" class= 'registro' > <p> Registrarse </p> </a>
-            <input type="submit" value="Enviar" class ='btn' required>
+            <input type="submit" value="Iniciar Sesion" class ='btn' required>
 
 
         </form>

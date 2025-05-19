@@ -28,17 +28,19 @@ include_once"includes/header.php";
         // creacion de archivo y envio de informacion
         file_put_contents($archivo,$json);
         echo("se ha registrado correctamente");
+        header("Refresh:5; url=index.php");
     }
 }
 
 ?>
     <h1>Registrate</h1>
-    <form action="index.php" method="post">
+    <form method="post">
         <label>Nombre:</label>
         <input type="text" placeholder="Nombre" required name="user_name">
         <label>Contraseña:</label>
         <input type="password" placeholder="Contraseña" required>
-        <input type="submit" value="Enviar" class ='btn'>
+        <a href="index.php" class= 'registro' > <p> Iniciar Sesion </p> </a>
+        <input type="submit" value="Registrarse" class ='btn'>
         
 <?php
     include_once"includes/footer.php";
