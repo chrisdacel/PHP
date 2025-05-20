@@ -36,15 +36,14 @@ form {
   width: 100%;
   max-width: 400px;
   position: relative;
-
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
   color: #333;
-
 }
+
 
 /* Etiquetas */
 label {
@@ -71,15 +70,18 @@ input[type="password"]:focus {
   border-color: #667eea;
   outline: none;
 }
+
 .registro  {
   color: #333;
   position: absolute;
   font-size: medium;
 
 }
+
 .registro a::visited{
   color:#333;
 }
+
 /* Botón */
 .btn {
   width: 100%;
